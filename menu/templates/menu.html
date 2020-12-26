@@ -1,0 +1,50 @@
+<section id="restaurant-menu">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Меню</h2>
+            </div>
+            <div class="row">
+                {% for item in categories %}
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="menu-section">
+                        <h2 class="menu-section-title">{{ item.title }}</h2>
+                        <div class="menu-item">
+                            <div class="menu-item-name"><a href="dish_inform">Шашлик Тореліні</a> </div>
+                            <div class="menu-item-price"> ₴9</div>
+                            <div class="menu-item-description"> Протягом цієї п'ятирічки в ґрунт
+                                було
+                                висаджено гарбуз, шпинат та цілющий фенхель.
+                            </div>
+
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-name"><a  href="dish_inform">Смажені пельмені</a></div>
+                            <div class="menu-item-price"> ₴7</div>
+                            <div class="menu-item-description"> Протягом цієї п'ятирічки в ґрунт
+                                було
+                                висаджено гарбуз, шпинат та цілющий фенхель.
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-name"><a href="dish_inform">Дикий гриб Аранчіні</a> </div>
+                            <div class="menu-item-price"> ₴9</div>
+                            <div class="menu-item-description"> Протягом цієї п'ятирічки в ґрунт
+                                було
+                                висаджено гарбуз, шпинат та цілющий фенхель.
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-name"><a href="dish_inform">Палички моцарели</a> </div>
+                            <div class="menu-item-price"> ₴10</div>
+                            <div class="menu-item-description"> Протягом цієї п'ятирічки в ґрунт
+                                було
+                                висаджено гарбуз, шпинат та цілющий фенхель.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+        </div>
+</section>
