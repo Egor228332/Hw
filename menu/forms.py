@@ -15,10 +15,10 @@ class DishForm(forms.ModelForm):
         ext = filename.split(".")[-1]
         filename = f"{uuid4()}.{ext}"
         return path.join("images/dishes", filename)
-    title = forms.CharField(max_length=50)
-    price = forms.DecimalField(max_digits=7, decimal_places=2)
-    description = forms.CharField(max_length=300)
-    spicy = forms.BooleanField()
+    title = forms.CharField(max_length=50,widget=forms.TextInput(attrs={"required":"required"}))
+    price = forms.DecimalField(max_digits=7, decimal_places=2,widget=forms.TextInput(attrs={"required":"required"}))
+    description = forms.CharField(max_length=300,widget=forms.TextInput(attrs={"required":"required"}))
+    spicy = forms.BooleanField(widget=forms.CheckboxInput(attrs={"required":"required"}))
     category = forms.ModelChoiceField(queryset=Category.objects)
     photo = forms.ImageField()
     class Meta(object):
