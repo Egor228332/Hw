@@ -7,11 +7,11 @@
                 <h2>Наші акції</h2>
             </div>
             <div class="row">
-                {% for item in dishes %}
+                {% for item in special_menu %}
                     <div class="col-xs-12 col-sm-4">
                         <div class="features-item">
                             <h3>{{ item.title }}</h3>
-                            <img src={% static "img/specials/1.jpg" %} class="img-responsive" alt="">
+                            <img src={{ item.photo.url }} class="img-responsive" alt="">
                             <p>{{ item.description }}</p>
                         </div>
                     </div>

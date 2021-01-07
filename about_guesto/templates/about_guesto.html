@@ -7,10 +7,12 @@
             <div class="col-xs-12 col-md-3 col-md-offset-1">
                 <div class="about-text">
                     <div class="section-title">
+                        {% for item in history %}
                         <h2>{{ about_title }}</h2>
                     </div>
                     <p>
-                        {{ about_info }}
+                        {{ item.text }}
+                        {% endfor %}
                     </p>
                 </div>
             </div>
